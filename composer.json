@@ -1,0 +1,32 @@
+{
+  "name": "siteation/magento2-module-enhanced-qty",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "magento2-module",
+  "description": "Adds qty buttons next to each qty input field.",
+  "readme": "README.md",
+  "keywords": [
+    "magento2",
+    "qty",
+    "quantity",
+    "number"
+  ],
+  "authors": [
+    {
+      "name": "Siteation",
+      "email": "info@siteation.nl",
+      "homepage": "https://www.siteation.nl"
+    }
+  ],
+  "require": {
+    "magento/module-checkout": "^102.0|^103.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Siteation\\EnhancedQty\\": ""
+    }
+  }
+}

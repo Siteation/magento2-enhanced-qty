@@ -1,0 +1,117 @@
+// Fylgja variables with Magento-UI fallback values if Fylgja is not present
+$form-border-width: 1px !default;
+$form-border-style: solid !default;
+$form-border-color: $color-gray76 !default;
+$form-border-radius: 3px !default;
+
+$enhanced-qty-layout: "min input plus" !default;
+$enhanced-qty-layout-fine: "input plus" "input min" !default;
+$enhanced-qty-border-width: $form-border-width !default;
+$enhanced-qty-border-style: $form-border-style !default;
+$enhanced-qty-border-color: $form-border-color !default;
+$enhanced-qty-border-radius: $form-border-radius !default;
+
+$enhanced-qty-btn-size: 3rem !default;
+$enhanced-qty-btn-size-fine: 1.8rem !default;
+$enhanced-qty-btn-padding: 2px !default;
+
+$enhanced-qty-btn-icon-increase: $icon-expand !default;
+$enhanced-qty-btn-icon-decrease: $icon-collapse !default;
+$enhanced-qty-btn-icon-increase-fine: $icon-up !default;
+$enhanced-qty-btn-icon-decrease-fine: $icon-down !default;
+$enhanced-qty-btn-icon-size: 0.65em !default;
+
+.enhanced-qty {
+    display: inline-grid;
+    grid-template-areas: $enhanced-qty-layout;
+    border: $enhanced-qty-border-width $enhanced-qty-border-style
+        $enhanced-qty-border-color;
+    border-radius: $enhanced-qty-border-radius;
+    overflow: hidden;
+
+    @if $enhanced-qty-layout-fine {
+        @media (any-pointer: fine) {
+            grid-template-areas: $enhanced-qty-layout-fine;
+        }
+    }
+
+    input {
+        position: relative;
+        grid-area: input;
+        height: auto;
+        border-width: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .qty-btn {
+        @include lib-icon-font(
+            $_icon-font-content: "",
+            $_icon-font-size: $enhanced-qty-btn-icon-size,
+            $_icon-font-text-hide: true,
+            $_icon-font-vertical-align: middle,
+            $_icon-font-line-height: 1,
+            $_icon-font-display: false
+        );
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: $enhanced-qty-btn-size;
+        min-height: $enhanced-qty-btn-size;
+        margin: 0;
+        padding: $enhanced-qty-btn-padding;
+        border-width: 0;
+        border-radius: 0;
+
+        @if $enhanced-qty-layout-fine {
+            @media (any-pointer: fine) {
+                min-width: $enhanced-qty-btn-size-fine;
+                min-height: $enhanced-qty-btn-size-fine;
+            }
+        }
+    }
+
+    .qty-btn[data-qty="up"] {
+        @include lib-icon-font-symbol($enhanced-qty-btn-icon-increase);
+        grid-area: plus;
+
+        @if $enhanced-qty-layout-fine {
+            @media (any-pointer: fine) {
+                @include lib-icon-font-symbol(
+                    $enhanced-qty-btn-icon-increase-fine
+                );
+            }
+        }
+    }
+
+    .qty-btn[data-qty="down"] {
+        @include lib-icon-font-symbol($enhanced-qty-btn-icon-decrease);
+        grid-area: min;
+
+        @if $enhanced-qty-layout-fine {
+            @media (any-pointer: fine) {
+                @include lib-icon-font-symbol(
+                    $enhanced-qty-btn-icon-decrease-fine
+                );
+            }
+        }
+    }
+
+    // Support for cart page styles
+    .cart.table-wrapper .col.qty & {
+        margin-top: -7px;
+
+        .input-text {
+            margin-top: 0;
+            height: auto;
+        }
+    }
+}
+
+// Fix for static width on qty elements in bundle fields
+@include min-screen($screen__m) {
+    .product-add-form .product-options-wrapper .field .control.enhanced-qty {
+        width: auto;
+        max-width: 80%;
+    }
+}
