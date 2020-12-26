@@ -1,6 +1,6 @@
 # Siteation - Magento 2 Module Enhanced Qty
 
-[![Packagist Version](siteation/magento2-module-enhanced-qty.svg)](https://packagist.org/packages/siteation/magento2-module-enhanced-qty)
+[![Packagist Version](https://img.shields.io/packagist/v/siteation/magento2-module-enhanced-qty)](https://packagist.org/packages/siteation/magento2-module-enhanced-qty)
 
 This Magento 2 module adds qty buttons next to each qty input field.
 Making it easier for your store customers to increase or decrease the quantity,
