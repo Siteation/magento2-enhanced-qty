@@ -1,4 +1,15 @@
-define(["jquery", "uiComponent"], function ($, Component) {
+define([
+    "jquery",
+    "Magento_Customer/js/model/authentication-popup",
+    "Magento_Customer/js/customer-data",
+    "Magento_Ui/js/modal/alert",
+    "Magento_Ui/js/modal/confirm",
+    "jquery-ui-modules/widget",
+    "mage/decorate",
+    "mage/collapsible",
+    "mage/cookies",
+    "jquery-ui-modules/effect-fade"
+], function ($, authenticationPopup, customerData, alert, confirm) {
     "use strict";
     return function (target) {
         return $.widget("mage.sidebar", $.mage.sidebar, {
