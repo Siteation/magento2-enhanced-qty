@@ -6,5 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 20120-10-15
+## [1.0.1] - 20120-12-27
+### Improvement
+- Namespacing in layout xml
+
+## [1.0.0] - 20120-12-26
 Initial release 🎉
