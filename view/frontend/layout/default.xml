@@ -4,7 +4,7 @@
     <referenceContainer name="before.body.end">
         <block
             class="Magento\Framework\View\Element\Template"
-            name="extra.js"
+            name="enhanced.qty.js"
             template="Siteation_EnhancedQty::js/enhanced-qty.phtml"
         />
     </referenceContainer>
