@@ -1,6 +1,6 @@
 {
   "name": "siteation/magento2-module-enhanced-qty",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "type": "magento2-module",
   "description": "Adds qty buttons next to each qty input field.",
