@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "magento/module-checkout": "^102.0|^103.0"
+    "magento/module-checkout": "^100.3|^100.4"
   },
   "autoload": {
     "files": [
