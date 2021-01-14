@@ -3,6 +3,9 @@ var config = {
         mixins: {
             "Magento_Checkout/js/sidebar": {
                 "Siteation_EnhancedQty/js/mixin/sidebar": true
+            },
+            "Magento_Catalog/product/view/validation": {
+                "Siteation_EnhancedQty/js/mixin/validation": true
             }
         }
     },

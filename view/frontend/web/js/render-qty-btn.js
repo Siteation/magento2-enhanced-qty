@@ -34,5 +34,6 @@ define(["jquery", "mage/translate", "domReady!"], function ($) {
         el.insertAdjacentHTML("afterend", qtyBtnMin);
         el.insertAdjacentHTML("afterend", qtyBtnPlus);
         el.parentNode.classList.add(wrapperClass);
+        el.parentNode.classList.add("addon");
     };
 });

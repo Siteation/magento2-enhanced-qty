@@ -106,6 +106,19 @@ $enhanced-qty-btn-icon-size: 0.65em !default;
             height: auto;
         }
     }
+
+    // Fix for Magento 2 qty boxes with the addon class
+    .fieldset > .field.qty .addon.enhanced-qty {
+        display: inline-grid;
+        width: auto;
+
+        input {
+            @extend .abs-input-qty;
+            order: 0;
+            display: block;
+            flex-basis: auto;
+        }
+    }
 }
 
 // Fix for static width on qty elements in bundle fields
