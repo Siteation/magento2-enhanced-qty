@@ -11,7 +11,7 @@ define([
     "jquery-ui-modules/effect-fade"
 ], function ($, authenticationPopup, customerData, alert, confirm) {
     "use strict";
-    return function (target) {
+    return function () {
         return $.widget("mage.sidebar", $.mage.sidebar, {
             _initContent: function () {
                 var self = this,

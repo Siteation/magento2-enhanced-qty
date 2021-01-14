@@ -1,15 +1,6 @@
 define(["jquery", "mage/translate", "domReady!"], function ($) {
     "use strict";
 
-    /**
-     * Adds qty buttons after each input number
-     *
-     * @param   {[type]}  config           [config description]
-     * @param   {[type]}  el               [el description]
-     * @param   {[type]}  .input-text.qty  [.input-text.qty description]
-     *
-     * @return  {[type]}                   [return description]
-     */
     return function (config, el = ".input-text.qty") {
         const {
             wrapperClass = "enhanced-qty",
@@ -17,7 +8,6 @@ define(["jquery", "mage/translate", "domReady!"], function ($) {
             btnPlusText = $.mage.__("Increase the quantity"),
             btnMinText = $.mage.__("Decrease the quantity")
         } = config;
-        console.log({ el, config });
 
         if (!el) return;
 
