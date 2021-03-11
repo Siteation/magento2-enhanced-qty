@@ -29,7 +29,7 @@ _[View more previews of the Enhanced Qty](previews)_
 Install the package via;
 
 ```bash
-composer require @siteation/magento2-module-enhanced-qty
+composer require siteation/magento2-module-enhanced-qty
 bin/magento setup:upgrade
 ```
 
