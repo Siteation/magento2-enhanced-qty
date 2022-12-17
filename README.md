@@ -2,6 +2,9 @@
 
 [![Packagist Version](https://img.shields.io/packagist/v/siteation/magento2-module-enhanced-qty)](https://packagist.org/packages/siteation/magento2-module-enhanced-qty)
 
+> **Warning** We stopped supporting Luma,
+> this module will no long recive any updates
+
 This Magento 2 module adds qty buttons next to each qty input field.
 Making it easier for your store customers to increase or decrease the quantity,
 of a product.
